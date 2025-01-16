@@ -27,7 +27,13 @@ Ovaj projekat istražuje implementaciju bežične komunikacije za prenos senzors
 Sve komponente su povezane u sistem sa **Arduino Mega2560** i dodatnim modulom. **DHT11 senzor** za mjerenje temperature i vlažnosti povezan je tako da su njegov **VCC i GND** priključeni na **5V i GND** pinove Arduina, dok je **DATA** pin povezan na jedan od digitalnih pinova. **HC-05 Bluetooth modul** povezan je tako da je njegov **VCC** spojen na **5V**, **GND** na **GND Arduina**, dok su **TX i RX** pinovi modula povezani na **RX i TX** pinove Arduina. **OLED ekran** koristi **I2C komunikaciju**, pa su **SDA i SCL** pinovi ekrana povezani na **SDA i SCL** pinove Arduina. **Jedna LED dioda** povezana je preko otpornika od **27Ω** na jedan od digitalnih pinova Arduina, dok je njena katoda spojena na **GND**.
 
 **Wi-Fi modul (ESP8266)** i **fotorezistor** s otpornikom od **10kΩ** nisu direktno povezani na **Arduino Mega**. Ove komponente čine nezavisni podsistem koji je povezan na laptop radi napajanja i komunikacije. **Fotorezistor** je spojen u seriji s otpornikom od **10kΩ**, pri čemu je spoj između fotorezistora i otpornika vjerovatno povezan na analogni ulaz Wi-Fi modula za očitavanje vrijednosti osvjetljenja. Napajanje i komunikacija za Wi-Fi modul osigurani su putem **USB veze s laptopom**. Za svrhu izrade naše sheme u programu **Fritzing**, korišten je drugi model **OLED displeja**. Nažalost, nije bilo moguće koristiti OLED displej koji je konkretno predviđen za stvarni projekat, jer taj model nije bio dostupan u biblioteci programa **Fritzing** koji se koristio za kreiranje sheme.
+
+## Šema povezivanja komponenti
+
+Ispod je vizuelna reprezentacija povezivanja komponenti:
+
 ![Šema povezivanja](images/BMT projekat_bb.png)
+
 
 
 ## Potencijalna poboljšanja
