@@ -24,12 +24,10 @@ Ovaj projekat istražuje implementaciju bežične komunikacije za prenos senzors
 - **Dvofaktorska autentifikacija (2FA)** – dodatna sigurnosna mjera koja zahtijeva potvrdu identiteta pomoću drugog faktora (npr. mobilni uređaj ili e-mail kod).
 
 ## Povezivanje komponenti
-Sve komponente su povezane u sistem sa **Arduino Mega2560** kao centralnim kontrolerom:
-- **DHT11 senzor**: VCC na 5V, GND na GND, DATA na digitalni pin Arduina.
-- **HC-05 Bluetooth modul**: VCC na 5V, GND na GND, TX na RX Arduina, RX na TX Arduina.
-- **OLED displej**: Koristi I2C komunikaciju – SDA na SDA Arduina, SCL na SCL Arduina.
-- **LED dioda**: Anoda povezana na digitalni pin, katoda na GND kroz otpornik od 220Ω.
-- **Wi-Fi modul (ESP8266)** i **fotorezistor**: Povezani su nezavisno na laptop putem USB-a, gdje se fotorezistor spaja na analogni ulaz modula.
+Sve komponente su povezane u sistem sa **Arduino Mega2560** i dodatnim modulom. **DHT11 senzor** za mjerenje temperature i vlažnosti povezan je tako da su njegov **VCC i GND** priključeni na **5V i GND** pinove Arduina, dok je **DATA** pin povezan na jedan od digitalnih pinova. **HC-05 Bluetooth modul** povezan je tako da je njegov **VCC** spojen na **5V**, **GND** na **GND Arduina**, dok su **TX i RX** pinovi modula povezani na **RX i TX** pinove Arduina. **OLED ekran** koristi **I2C komunikaciju**, pa su **SDA i SCL** pinovi ekrana povezani na **SDA i SCL** pinove Arduina. **Jedna LED dioda** povezana je preko otpornika od **27Ω** na jedan od digitalnih pinova Arduina, dok je njena katoda spojena na **GND**.
+
+**Wi-Fi modul (ESP8266)** i **fotorezistor** s otpornikom od **10kΩ** nisu direktno povezani na **Arduino Mega**. Ove komponente čine nezavisni podsistem koji je povezan na laptop radi napajanja i komunikacije. **Fotorezistor** je spojen u seriji s otpornikom od **10kΩ**, pri čemu je spoj između fotorezistora i otpornika vjerovatno povezan na analogni ulaz Wi-Fi modula za očitavanje vrijednosti osvjetljenja. Napajanje i komunikacija za Wi-Fi modul osigurani su putem **USB veze s laptopom**. Za svrhu izrade naše sheme u programu **Fritzing**, korišten je drugi model **OLED displeja**. Nažalost, nije bilo moguće koristiti OLED displej koji je konkretno predviđen za stvarni projekat, jer taj model nije bio dostupan u biblioteci programa **Fritzing** koji se koristio za kreiranje sheme.
+
 
 ## Potencijalna poboljšanja
 - Zamjena **DHT11** sa **DHT22** senzorom radi preciznijih mjerenja.
