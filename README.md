@@ -32,7 +32,7 @@ Sve komponente su povezane u sistem sa **Arduino Mega2560** i dodatnim modulom. 
 
 Ispod je vizuelna reprezentacija povezivanja komponenti:
 
-![Šema povezivanja](Image(Šema)/BMT projekat_bb.png)
+![Šema povezivanja](Image_Shema/BMT projekat_bb.png)
 
 ## Potencijalna poboljšanja
 - Zamjena **DHT11** sa **DHT22** senzorom radi preciznijih mjerenja.
