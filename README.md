@@ -34,8 +34,6 @@ Ispod je vizuelna reprezentacija povezivanja komponenti:
 
 ![Šema povezivanja](Image(Šema)/BMT projekat_bb.png)
 
-
-
 ## Potencijalna poboljšanja
 - Zamjena **DHT11** sa **DHT22** senzorom radi preciznijih mjerenja.
 - Optimizacija koda za stabilniju Bluetooth komunikaciju.
