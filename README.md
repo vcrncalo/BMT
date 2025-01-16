@@ -20,6 +20,16 @@ Ovaj projekat istražuje implementaciju bežične komunikacije za prenos senzors
 - **Bluetooth (IEEE 802.15.1)** – za kratkodometnu bežičnu komunikaciju.
 - **Wi-Fi (IEEE 802.11)** – omogućava slanje podataka putem e-maila (SMTP protokol).
 - **Visible Light Communication (VLC)** – eksperimentalna metoda prenosa podataka putem svjetlosti.
+- **SMTP (Simple Mail Transfer Protocol)** – koristi se za slanje podataka putem e-maila, omogućava komunikaciju između klijentskih i serverskih aplikacija.
+- **Dvofaktorska autentifikacija (2FA)** – dodatna sigurnosna mjera koja zahtijeva potvrdu identiteta pomoću drugog faktora (npr. mobilni uređaj ili e-mail kod).
+
+## Povezivanje komponenti
+Sve komponente su povezane u sistem sa **Arduino Mega2560** kao centralnim kontrolerom:
+- **DHT11 senzor**: VCC na 5V, GND na GND, DATA na digitalni pin Arduina.
+- **HC-05 Bluetooth modul**: VCC na 5V, GND na GND, TX na RX Arduina, RX na TX Arduina.
+- **OLED displej**: Koristi I2C komunikaciju – SDA na SDA Arduina, SCL na SCL Arduina.
+- **LED dioda**: Anoda povezana na digitalni pin, katoda na GND kroz otpornik od 220Ω.
+- **Wi-Fi modul (ESP8266)** i **fotorezistor**: Povezani su nezavisno na laptop putem USB-a, gdje se fotorezistor spaja na analogni ulaz modula.
 
 ## Potencijalna poboljšanja
 - Zamjena **DHT11** sa **DHT22** senzorom radi preciznijih mjerenja.
@@ -35,4 +45,4 @@ Ovaj projekat istražuje implementaciju bežične komunikacije za prenos senzors
 1. Povežite komponente prema šemi iz projekta.
 2. Učitajte **Arduino skicu** u Arduino Mega 2560 putem **Arduino IDE**.
 3. Pokrenite Bluetooth aplikaciju na mobilnom uređaju i povežite se sa HC-05 modulom.
-4. Podaci će se prikazivati na OLED displeju i slati putem Bluetootha.
+4. Podaci će se prikazivati na OLED displeju i slati putem Bluetootha ili e-maila korištenjem SMTP protokola sa dvofaktorskom autentifikacijom.
