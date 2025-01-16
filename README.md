@@ -32,7 +32,7 @@ Sve komponente su povezane u sistem sa **Arduino Mega2560** i dodatnim modulom. 
 
 Ispod je vizuelna reprezentacija povezivanja komponenti:
 
-<img src="Image_Shema)/BMT_projekat_bb.png" alt="Šema povezivanja komponenti">
+<img src="BMT_projekat_bb.png" alt="Šema povezivanja komponenti">
 
 
 ## Potencijalna poboljšanja
