@@ -36,9 +36,3 @@ Ovaj projekat istražuje implementaciju bežične komunikacije za prenos senzors
 2. Učitajte **Arduino skicu** u Arduino Mega 2560 putem **Arduino IDE**.
 3. Pokrenite Bluetooth aplikaciju na mobilnom uređaju i povežite se sa HC-05 modulom.
 4. Podaci će se prikazivati na OLED displeju i slati putem Bluetootha.
-
-## Autor
-Ovaj projekat je razvijen u okviru studija na **Elektrotehničkom fakultetu, Univerziteta u Sarajevu**.
-
-## Licenca
-Ovaj projekat je open-source i dostupan pod MIT licencom.
